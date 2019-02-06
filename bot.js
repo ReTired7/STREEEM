@@ -6,8 +6,8 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
+  if (msg.content === 'lord') {
+    msg.reply('!p صوت الشاعر اه');
   }
 });
 
