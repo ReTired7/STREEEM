@@ -827,17 +827,18 @@ client.on("message", (message) => {
     }
 });
 
-   client.on("message", async message => {
-    if(message.content.startsWith("f!invite")) {
-        let invite = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setAuthor(message.author.username, message.author.displayAvatarURL)
-            .setThumbnail(message.author.avatarURL)
-            .setTitle("**Click Here To Invite The Bot To Your Server :sparkling_heart:**")
-            .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&scope=bot&permissions=8`);
-            message.channel.sendEmbed(invite);
-    }
-});
+   client.on('message' , message => {
+
+    if (message.content === "f!invite") {
+        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)     
+ .setDescription("Add me" + `
+ **
+رابط البوت | https://discordapp.com/api/oauth2/authorize?client_id=542755604230570024&permissions=0&scope=bot
+ **
+`);
   message.author.sendEmbed(embed);
    }
 });
