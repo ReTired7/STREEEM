@@ -827,8 +827,6 @@ client.on("message", (message) => {
     }
 });
 
- client.on('message' , message => {
-
    client.on("message", async message => {
     if(message.content.startsWith("f!invite")) {
         let invite = new Discord.RichEmbed()
