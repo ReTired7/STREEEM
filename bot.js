@@ -364,8 +364,8 @@ client.on("message", async message => {
             .setColor("RANDOM")
             .setThumbnail(message.author.avatarURL)
             .setDescription(`** 
-            الذي صنع البوت هو ReTir'ed 
-            للتواصل معه في الديسكورد ReTir'ed#1000
+            الذي صنع البوت هو ReTir'ed- Marshmallo
+            للتواصل معه في الديسكورد ! Marshmallo { SN1 } 😢💔#1000
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
